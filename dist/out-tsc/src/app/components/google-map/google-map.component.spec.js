@@ -1,0 +1,21 @@
+import { async, TestBed } from '@angular/core/testing';
+import { GoogleMapComponent } from './google-map.component';
+describe('GoogleMapComponent', () => {
+    let component;
+    let fixture;
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [GoogleMapComponent]
+        })
+            .compileComponents();
+    }));
+    beforeEach(() => {
+        fixture = TestBed.createComponent(GoogleMapComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
+});
+//# sourceMappingURL=google-map.component.spec.js.map

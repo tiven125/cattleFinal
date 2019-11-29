@@ -1,0 +1,85 @@
+<div class="col-md-6 col-centrada">
+  <div class="card col-centrada">
+    <div class="card-header pb-2">
+      <h4 class="card-title" id="basic-layout-icons">Agregar Bovino</h4>
+    </div>
+    <div class="card-content">
+      <div class="px-3">
+          <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" (ngSubmit)="bovino(f)">
+
+              <div class="form-body">
+                
+                    <div class="form-group">
+                        <label for="timesheetinput3">fecha Nacimiento</label>
+                        <div class="position-relative has-icon-left">
+                          <input ngModel name="fechaNacimiento" type="date" id="timesheetinput3" class="form-control" >
+                          <div class="form-control-position">
+                            <i class="ft-message-square"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="col-xl-15 col-lg-15 col-md-12">
+                      <fieldset class="form-group">
+                          <label for="placeTextarea">Descripcion</label>
+                          <textarea ngModel name="descripcion" class="form-control" id="placeTextarea" rows="3" placeholder="DESCRIPCION"></textarea>
+                      </fieldset>                                
+                  </div>
+
+
+                    <div class="form-group">
+                        <label for="timesheetinput1">Sexo</label>
+                        <div class="position-relative has-icon-left">
+                            <input ngModel name="sexo" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3" />
+                            <div class="form-control-position">
+                            <i class="ft-zap"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="timesheetinput1">Raza</label>
+                          <div class="position-relative has-icon-left">
+                              <input ngModel name="raza" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3" />
+                              <div class="form-control-position">
+                              <i class="ft-github"></i>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-xl-12 col-lg-12 col-md-15">
+                            <fieldset class="form-group">
+                                <label for="basicSelect">Lote</label>
+                                <ng-select class="form-control"  [(ngModel)]="lotetSelect" [items]="listlote" bindLabel="ubicacion" bindValue="_id" name="listSelect">
+                                  </ng-select>
+                            </fieldset>                                
+                        </div>
+
+                      
+                        <div class="col-xl-12 col-lg-12 col-md-15">
+                            <fieldset class="form-group">
+                                <label for="basicSelect">Peso</label>
+                                <ng-select class="form-control"  [(ngModel)]="pesotSelect" [items]="listpeso" bindLabel="kilogramos" bindValue="_id" name="ganaderoSelect">
+                                  </ng-select>
+                            </fieldset>                                
+                        </div>
+
+
+                        
+                </div>
+               <div class="form-actions right">
+                <button type="button" class="btn btn-raised btn-warning mr-1"
+                [routerLink]="['/bovino/bovinolist']">
+                   <i class="icon-list"></i> Lista
+                 </button>
+               <button type="button" class="btn btn-raised btn-primary"
+               type="ngSubmit" (click)="ngSubmit">
+                 <i class="fa fa-check-square-o"></i> Guardar
+               </button>
+             </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div> 
+

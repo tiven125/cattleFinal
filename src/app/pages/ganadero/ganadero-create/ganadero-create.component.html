@@ -1,0 +1,58 @@
+<div class="col-md-6 col-centrada">
+    <div class="card col-centrada">
+      <div class="card-header pb-2">
+        <h4 class="card-title" id="basic-layout-icons">Agrear Ganadero</h4>
+      </div>
+      <div class="card-content">
+        <div class="px-3">
+            <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" (ngSubmit)="ganadero(f)">
+
+                <div class="form-body">
+                  
+                    <div class="form-group">
+                      <label for="timesheetinput1">Nombre</label>
+                      <div class="position-relative has-icon-left">
+                          <input ngModel name="nombre" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3" />
+                          <div class="form-control-position">
+                          <i class="fa-user"></i>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="timesheetinput1">Correo</label>
+                        <div class="position-relative has-icon-left">
+                            <input ngModel name="correo" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3"/>
+                            <div class="form-control-position">
+                            <i class="fa-envelope-o"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="timesheetinput1">Telefono</label>
+                          <div class="position-relative has-icon-left">
+                              <input ngModel name="telefono" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3" />
+                              <div class="form-control-position">
+                              <i class="icon-call-end"></i>
+                            </div>
+                          </div>
+                        </div>
+
+                  </div>
+                 <div class="form-actions right">
+                  <button type="button" class="btn btn-raised btn-warning mr-1"
+                  [routerLink]="['/ganadero/ganaderolist']">
+                     <i class="icon-list"></i> Lista
+                   </button>
+                 <button type="button" class="btn btn-raised btn-primary"
+                 type="ngSubmit" (click)="ngSubmit">
+                   <i class="fa fa-check-square-o"></i> Guardar
+                 </button>
+               </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div> 
+

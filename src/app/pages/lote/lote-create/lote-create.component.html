@@ -1,0 +1,64 @@
+<div class="col-md-6 col-centrada">
+    <div class="card col-centrada">
+      <div class="card-header pb-2">
+        <h4 class="card-title" id="basic-layout-icons">Agregar lote</h4>
+      </div>
+      <div class="card-content">
+        <div class="px-3">
+            <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" (ngSubmit)="lote(f)">
+
+                <div class="form-body">
+                    <div class="form-group">
+                      <label for="timesheetinput1">Nombre Finca</label>
+                      <div class="position-relative has-icon-left">
+                          <input ngModel name="nombre" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3" />
+                          <div class="form-control-position">
+                          <i class="fa-user"></i>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <div class="form-group">
+                        <label for="timesheetinput1">Ubicacion</label>
+                        <div class="position-relative has-icon-left">
+                            <input ngModel name="ubicacion" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3"/>
+                            <div class="form-control-position">
+                            <i class="ft-map-pin"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="timesheetinput1">Dimension</label>
+                          <div class="position-relative has-icon-left">
+                              <input ngModel name="dimension" id="timesheetinput1" class="form-control" type="text" class="form-control mb-3" />
+                              <div class="form-control-position">
+                              <i class="ft-square"></i>
+                            </div>
+                          </div>
+                        </div>
+
+                          <div class="col-xl-12 col-lg-12 col-md-15">
+                              <fieldset class="form-group">
+                                  <label for="basicSelect">Ganadero</label>
+                                  <ng-select  class="form-control"  [(ngModel)]="ganaderoSelect" [items]="ganaderos" bindLabel="nombre" bindValue="_id" name="ganaderoSelect">
+                                    </ng-select>
+                              </fieldset>                                
+                          </div>
+                  </div>
+                 <div class="form-actions right">
+                    <button type="button" class="btn btn-raised btn-warning mr-1"
+                [routerLink]="['/lote/lotelist']">
+                   <i class="icon-list"></i> Lista
+                 </button>
+                 <button type="button" class="btn btn-raised btn-primary"
+                 type="ngSubmit" (click)="ngSubmit">
+                   <i class="fa fa-check-square-o"></i> Guardar
+                 </button>
+               </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div> 
+

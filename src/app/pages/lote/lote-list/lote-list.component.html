@@ -1,0 +1,45 @@
+
+<div class="lote-btn">
+  <button type="button" class="btn btn-raised btn-info"
+  [routerLink]="['/lote/lotecreate']">
+     <i class="icon-list"></i> Crear
+   </button>
+</div>
+ 
+ <div class="container">
+    <h3>Lista Lote</h3>
+    <table class="table table-bordered table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Nombre</th>
+          <th scope="col">ubicacion</th>
+          <th scope="col">dimension</th>
+          <th scope="col">Nombre Ganadero</th>
+          <th scope="col">Eliminar</th>
+          <th scope="col">Actualizar</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of loteData | paginate: { itemsPerPage: 10, currentPage: pageActual}">
+          <td>{{item.nombre}}</td>
+          <td>{{item.ubicacion}}</td>
+          <td>{{item.dimension}}</td>
+          <td>{{item.ganadero.nombre}}</td>
+          <td>
+            <a class="btn text-danger" (click)="deletLoteId(item)">
+              <i class="fa fa-trash"></i>
+            </a>
+          </td>
+          <td>
+              <a class="btn" routerLink="/lote/loteedit/{{item._id}}">
+                <i class="fa fa-edit"></i>
+              </a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+    <pagination-controls (pageChange)="pageActual = $event"></pagination-controls>
+  </div>
+
+

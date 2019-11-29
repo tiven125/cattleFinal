@@ -1,0 +1,29 @@
+<div class="col-md-6 col-centrada">
+    <div class="card col-centrada">
+      <div class="card-header pb-2">
+        <h4 class="card-title" id="basic-layout-icons">Modificar Peso</h4>
+      </div>
+      <div class="card-content">
+        <div class="px-3">
+                <div class="form-body">
+                    <div class="form-group">
+                      <label for="timesheetinput1">Kilogramos</label>
+                      <div class="position-relative has-icon-left">
+                        <input type="number" [(ngModel)]="pesoData.kilogramos" class="form-control" placeholder="kilogramos">
+                        <div class="form-control-position">
+                          <i class="ft-anchor"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 <div class="form-actions right">
+                 <button type="button" class="btn btn-raised btn-primary"
+                 (click)="updatePeso()">
+                   <i class="fa fa-check-square-o"></i> Modificar
+                 </button>
+               </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+

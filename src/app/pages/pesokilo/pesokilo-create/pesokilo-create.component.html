@@ -1,0 +1,36 @@
+      <div class="col-md-6 col-centrada">
+        <div class="card col-centrada">
+          <div class="card-header pb-2">
+            <h4 class="card-title" id="basic-layout-icons">Agrear Peso</h4>
+          </div>
+          <div class="card-content">
+            <div class="px-3">
+                <form ngNativeValidate #f="ngForm" class="form-horizontal form-material" (ngSubmit)="pesokilo(f)">
+                    <div class="form-body">
+                        <div class="form-group">
+                          <label for="timesheetinput1">Kilogramos</label>
+                          <div class="position-relative has-icon-left">
+                            <input ngModel name="kilogramos" type="number" id="timesheetinput1" class="form-control"  placeholder="kilogramos" required />
+                            <div class="form-control-position">
+                              <i class="ft-anchor"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                     <div class="form-actions right">
+                      <button type="button" class="btn btn-raised btn-warning mr-1"
+                      [routerLink]="['/peso/pesokilolist']">
+                         <i class="icon-list"></i> Lista
+                       </button>
+                     <button type="button" class="btn btn-raised btn-primary"
+                     type="ngSubmit" (click)="ngSubmit">
+                       <i class="fa fa-check-square-o"></i> Guardar
+                     </button>
+                   </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+      </div> 
+    
+    
